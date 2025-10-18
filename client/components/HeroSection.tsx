@@ -24,7 +24,7 @@ export function HeroSection({
       )}
       style={{
         backgroundImage:
-          'url("https://images.pexels.com/photos/6634136/pexels-photo-6634136.jpeg")',
+          'url("/Minimal Modern You Are Enough Quote Desktop Wallpaper.png")',
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -38,10 +38,10 @@ export function HeroSection({
       <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left column - Text content */}
-          <div className="space-y-8 z-10">
+          <div className="space-y-8 z-10 w-[750px]">
             {/* Logo/Brand - image placeholder */}
             <div className="flex items-center">
-              <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
+              <img src="/Logo.png" alt="Logo" className="h-auto w-[180px] -ml-[30px] -mb-[70px]" />
             </div>
 
             {/* Heading */}
@@ -66,7 +66,7 @@ export function HeroSection({
           </div>
 
           {/* Right column - Visual area (transparent placeholder) */}
-          <div className="relative h-96 sm:h-[500px] lg:h-[600px] -order-1 lg:order-1" />
+          <div className="relative h-96 sm:h-[500px] lg:h-[600px] -order-1 lg:order-1 w-[50px]" />
         </div>
       </div>
     </section>
