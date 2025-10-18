@@ -57,6 +57,9 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        brand: {
+          yellow: "#FEB60A",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
