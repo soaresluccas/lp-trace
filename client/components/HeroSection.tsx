@@ -17,49 +17,58 @@ export function HeroSection({
   className,
 }: HeroSectionProps) {
   return (
-    <div
+    <section
       className={cn(
-        "relative min-h-screen bg-black text-white overflow-hidden",
-        className
+        "relative min-h-screen overflow-hidden flex items-center",
+        className,
       )}
+      style={{
+        backgroundImage:
+          'url("https://images.pexels.com/photos/6634136/pexels-photo-6634136.jpeg")',
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
     >
       {/* Background decorative yellow shapes */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full opacity-10 blur-3xl"></div>
-      <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-yellow-400 rounded-full opacity-10 blur-3xl"></div>
+      <div className="absolute top-1/4 right-0 -translate-y-1/4 w-96 h-96 bg-primary rounded-full opacity-100 blur-2xl -z-10" />
+      <div className="absolute bottom-0 right-12 w-72 h-96 bg-primary rounded-full opacity-80 blur-3xl -z-10" />
 
       {/* Content container */}
-      <div className="relative z-10 container mx-auto px-4 py-20 h-screen flex items-center">
-        {/* Left column - Text content */}
-        <div className="w-full lg:w-1/2 flex flex-col justify-center">
-          {/* Logo/Brand - image placeholder */}
-          <div className="mb-8 w-16 h-16 rounded-full bg-yellow-400 flex items-center justify-center opacity-0"></div>
+      <div className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left column - Text content */}
+          <div className="space-y-8 z-10">
+            {/* Logo/Brand - image placeholder */}
+            <div className="flex items-center">
+              <img src="/logo.png" alt="Logo" className="h-12 w-auto" />
+            </div>
 
-          {/* Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white">
-            {heading}
-          </h1>
+            {/* Heading */}
+            <h1 className="text-4xl sm:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight">
+              {heading}
+            </h1>
 
-          {/* Description */}
-          <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl leading-relaxed">
-            {description}
-          </p>
+            {/* Description */}
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed max-w-2xl">
+              {description}
+            </p>
 
-          {/* CTA Button */}
-          <div className="flex">
-            <Button
-              asChild
-              className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold px-8 py-6 text-lg rounded-lg transition-colors"
-            >
-              <a href={buttonHref}>{buttonText}</a>
-            </Button>
+            {/* CTA Button */}
+            <div className="pt-4">
+              <Button
+                asChild
+                className="bg-primary hover:bg-primary/90 text-black font-bold text-lg px-8 py-6 rounded-lg h-auto w-full sm:w-auto"
+              >
+                <a href={buttonHref}>{buttonText}</a>
+              </Button>
+            </div>
           </div>
-        </div>
 
-        {/* Right column - Visual area (transparent placeholder) */}
-        <div className="hidden lg:flex w-1/2 items-center justify-center">
-          <div className="w-full h-96 bg-gradient-to-b from-yellow-400 to-yellow-600 rounded-2xl opacity-10 blur-xl"></div>
+          {/* Right column - Visual area (transparent placeholder) */}
+          <div className="relative h-96 sm:h-[500px] lg:h-[600px] -order-1 lg:order-1" />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
