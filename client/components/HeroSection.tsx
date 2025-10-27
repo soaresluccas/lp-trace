@@ -138,9 +138,9 @@ export function HeroSection({
             className="relative h-96 sm:h-[500px] lg:h-[600px] flex items-center justify-center animate-fade-up"
             style={{ animationDelay: "0.6s" }}
           >
-            <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/20 to-yellow-400/5 rounded-2xl animate-pulse" />
+            <div className="absolute inset-0 bg-gradient-to-b from-yellow-400/20 to-yellow-400/5 rounded-2xl animate-fade-in-static" />
             <div className="relative flex items-center justify-center text-center px-6">
-              <div className="space-y-4 animate-float">
+              <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div className="bg-yellow-400/10 border border-yellow-400/30 rounded-lg p-4 backdrop-blur-sm hover:bg-yellow-400/20 transition-colors duration-300">
                     <div className="text-2xl font-bold text-yellow-400">
