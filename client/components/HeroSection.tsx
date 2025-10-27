@@ -55,7 +55,10 @@ export function HeroSection({
     <section className="relative min-h-screen w-full bg-black text-white overflow-hidden flex items-center justify-center">
       {/* Background decorative yellow shapes */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-400 rounded-full opacity-5 blur-3xl animate-fade-in-static" />
-      <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-yellow-400 rounded-full opacity-5 blur-3xl animate-fade-in-static" style={{ animationDelay: "0.3s" }} />
+      <div
+        className="absolute bottom-0 left-1/4 w-80 h-80 bg-yellow-400 rounded-full opacity-5 blur-3xl animate-fade-in-static"
+        style={{ animationDelay: "0.3s" }}
+      />
 
       {/* Content container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
