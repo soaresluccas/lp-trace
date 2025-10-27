@@ -27,15 +27,6 @@ const AnimatedText = ({
           <span
             key={idx}
             className={`inline-block mr-2 ${isHighlighted ? "text-yellow-400 font-bold" : ""}`}
-            style={{
-              animationName: "fadeUp",
-              animationDuration: "0.8s",
-              animationTimingFunction: "ease-out",
-              animationFillMode: "forwards",
-              animationIterationCount: 1,
-              animationDelay: `${delay * 0.1 + idx * 0.05}s`,
-              opacity: 0,
-            }}
           >
             {word}
           </span>
