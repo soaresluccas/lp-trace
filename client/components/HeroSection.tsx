@@ -45,19 +45,19 @@ const AnimatedText = ({
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
     >
-      {words.map((word, idx) => (
-        <motion.span key={idx} variants={child} className="inline-block mr-2">
-          <span
-            className={
-              highlightWord && word.includes(highlightWord.toLowerCase())
-                ? "text-yellow-400 font-bold"
-                : ""
-            }
-          >
-            {word}
-          </span>
-        </motion.span>
-      ))}
+      {words.map((word, idx) => {
+        const isHighlighted =
+          highlightWord &&
+          word.toUpperCase().includes(highlightWord.toUpperCase());
+
+        return (
+          <motion.span key={idx} variants={child} className="inline-block mr-2">
+            <span className={isHighlighted ? "text-yellow-400 font-bold" : ""}>
+              {word}
+            </span>
+          </motion.span>
+        );
+      })}
     </motion.div>
   );
 };
