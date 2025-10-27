@@ -26,9 +26,11 @@ const AnimatedText = ({
         return (
           <span
             key={idx}
-            className={`inline-block mr-2 animate-fade-up ${isHighlighted ? "text-yellow-400 font-bold" : ""}`}
+            className={`inline-block mr-2 ${isHighlighted ? "text-yellow-400 font-bold" : ""}`}
             style={{
+              animation: `fadeUp 0.8s ease-out forwards`,
               animationDelay: `${delay * 0.1 + idx * 0.05}s`,
+              opacity: 0,
             }}
           >
             {word}
@@ -107,7 +109,7 @@ export function HeroSection({
                   asChild
                   className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-base sm:text-lg px-8 py-6 rounded-lg h-auto w-full sm:w-auto transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-yellow-400/50"
                 >
-                  <a href={buttonHref}>{buttonText}</a>
+                  <a href={buttonHref}>{"Agendar Análise Gratuita"}</a>
                 </Button>
               </div>
             </div>
