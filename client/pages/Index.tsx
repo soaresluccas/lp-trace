@@ -3,9 +3,9 @@ import { HeroSection } from "@/components/HeroSection";
 export default function Index() {
   return (
     <HeroSection
-      heading="Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-      buttonText="AGENDAR AGORA"
+      heading="Acelere o faturamento do seu delivery com o Método CAC"
+      description="Agende uma análise gratuita e descubra como a aplicação do nosso método pode levar o seu delivery para o próximo nível."
+      buttonText="Agendar An��lise Gratuita"
       buttonHref="#"
     />
   );
