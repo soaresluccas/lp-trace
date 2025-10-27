@@ -28,7 +28,11 @@ const AnimatedText = ({
             key={idx}
             className={`inline-block mr-2 ${isHighlighted ? "text-yellow-400 font-bold" : ""}`}
             style={{
-              animation: `fadeUp 0.8s ease-out forwards`,
+              animationName: "fadeUp",
+              animationDuration: "0.8s",
+              animationTimingFunction: "ease-out",
+              animationFillMode: "forwards",
+              animationIterationCount: 1,
               animationDelay: `${delay * 0.1 + idx * 0.05}s`,
               opacity: 0,
             }}
